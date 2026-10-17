@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2026-10-17 10:08:40">
+<sys_script_client action="INSERT_OR_UPDATE">
+<active>true</active>
+<applies_extended>false</applies_extended>
+<condition/>
+<description/>
+<field>state</field>
+<global>true</global>
+<isolate_script>true</isolate_script>
+<messages/>
+<name> Prevent state change via list edit</name>
+<order/>
+<script><![CDATA[
+
+function onCellEdit(sysIDs, table, oldValues, newValue, callback) {
+
+    alert('State cannot be updated using list editing. Please open the Incident.');
+
+    callback(false);
+}
+]]></script>
+<sys_class_name>sys_script_client</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-10-17 08:43:11</sys_created_on>
+<sys_domain>global</sys_domain>
+<sys_domain_path>/</sys_domain_path>
+<sys_id>8929ca64834097102f436060ceaad323</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_name> Prevent state change via list edit</sys_name>
+<sys_overrides display_value=""/>
+<sys_package display_value="Global" source="global">global</sys_package>
+<sys_policy/>
+<sys_scope display_value="Global">global</sys_scope>
+<sys_update_name>sys_script_client_8929ca64834097102f436060ceaad323</sys_update_name>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-10-17 08:43:11</sys_updated_on>
+<table>incident</table>
+<type>onCellEdit</type>
+<ui_type>0</ui_type>
+<view/>
+</sys_script_client>
+</unload>
